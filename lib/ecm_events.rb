@@ -1,2 +1,1 @@
-module EcmEvents
-end
+require 'ecm/events'

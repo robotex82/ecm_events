@@ -1,7 +1,9 @@
 require 'spec_helper'
 
-describe EcmEvents do
-  it "should be valid" do
-    EcmEvents.should be_a(Module)
+module Ecm
+  describe Events do
+    it "should be valid" do
+      Events.should be_a(Module)
+    end
   end
 end

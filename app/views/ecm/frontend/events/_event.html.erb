@@ -1,0 +1,10 @@
+<div id="event-<%= event.id %>" class="event">
+  <h2 class="event-name"><%= event.name %></h2>
+  <h3 class="event-date"><%= formatted_event_date(event) %></h3>
+  <h3 class="event-location"><%= event.location %></h3>
+  <%= image_tag event.preview_image.url, { :class => "event-preview-image" } %>
+  <p class="event-description"><%= event.description %></p>
+  <p class="event-link"><%= link_to event.link, event.link %></p>
+</div>
+
+<%= link_to "Back", url_for(:back) %>
