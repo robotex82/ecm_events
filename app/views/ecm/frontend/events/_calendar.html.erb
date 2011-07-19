@@ -1,0 +1,12 @@
+<%= render :partial => "calendar_controls", :locals => { :time => @time } %>
+
+<table class="event-calendar">
+  <% calendar.each do |day, events| %>
+    <tr class="event-calendar-day"> 
+      <th><%= day %></th>
+      <td>
+        <%= render :partial => "calendar_event", :collection => events %>
+      </td>
+    </tr>
+  <% end %>  
+</table>    

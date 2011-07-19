@@ -1,1 +1,5 @@
-<%= render :partial => "calendar_event", :collection => @events %>
+<h1>Events</h1>
+
+<h2><%= l @time, :format => :calendar %></h2>
+
+<%= render :partial => "calendar", :object => @days %>

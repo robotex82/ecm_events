@@ -2,3 +2,4 @@ en:
   time:
     formats:
       event: "%d %B"
+      calendar: "%Y %B"      
