@@ -3,5 +3,6 @@
     <h2 class="event-name"><%= calendar_event.name %></h2>
   <% end %>
   <h3 class="event-location"><%= calendar_event.location %></h3>
-  <%= image_tag calendar_event.preview_image.url, { :class => "event-preview-image" } %>
+  <%=  %>
+  <%= image_tag(calendar_event.preview_image.url, { :class => "event-preview-image" }) if calendar_event.preview_image? %>
 </div>
