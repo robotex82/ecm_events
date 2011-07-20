@@ -12,7 +12,7 @@ class Ecm::Frontend::EventsController < Ecm::FrontendController
       @days[day] = []
       @events.each do |event|
         
-        if event.begin_at >= DateTime.new(@year.to_i, @month.to_i, day).beginning_of_day.in_time_zone and event.begin_at < DateTime.new(@year.to_i, @month.to_i, day).end_of_day.in_time_zone
+        if event.begin_at >= DateTime.new(@year.to_i, @month.to_i, day).in_time_zone.beginning_of_day.utc and event.begin_at < DateTime.new(@year.to_i, @month.to_i, day).in_time_zone.end_of_day.utc
           @days[day].push event
         end
       end
