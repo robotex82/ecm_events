@@ -32,6 +32,6 @@ class Ecm::Event < ActiveRecord::Base
       begin_of_month = Date.today.beginning_of_month
     end
     end_of_month = begin_of_month.end_of_month 
-    where("begin_at > ? AND begin_at < ?", begin_of_month, end_of_month)
+    where("begin_at >= ? AND begin_at < ?", begin_of_month, end_of_month)
   end
 end
