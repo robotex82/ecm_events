@@ -13,7 +13,7 @@ class Ecm::Frontend::EventsController < Ecm::FrontendController
       @events.each do |event|
         
         if event.begin_at > DateTime.new(@year.to_i, @month.to_i, day) and event.begin_at < DateTime.new(@year.to_i, @month.to_i, day).end_of_day
-          @days[day] << event
+          @days[day].push event
         end
       end
     end
