@@ -3,7 +3,7 @@ class Ecm::Frontend::EventsController < Ecm::FrontendController
     @month = params[:month] ||= Time.now.month
     @year  = params[:year]  ||= Time.now.year
     
-    @time = Time.new(@year.to_i, @month.to_i)    
+    @time = DateTime.new(@year.to_i, @month.to_i)    
     
     @events = ::Event.in_month(@year, @month).all
     
