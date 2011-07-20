@@ -6,5 +6,5 @@ Gem::Specification.new do |s|
   s.summary = "ECM Event module. provides event functionality"
   s.description = "ECM Event module. provides event functionality"
   s.files = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile", "README.rdoc"]
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 end
