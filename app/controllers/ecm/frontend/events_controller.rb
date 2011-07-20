@@ -3,7 +3,7 @@ class Ecm::Frontend::EventsController < Ecm::FrontendController
     @month = params[:month] ||= Time.now.month
     @year  = params[:year]  ||= Time.now.year
     
-    @time = DateTime.new(@year.to_i, @month.to_i).in_time_zone    
+    @time = DateTime.new(@year.to_i, @month.to_i).beginning_of_day.in_time_zone    
     
     @events = ::Event.in_month(@year, @month).all
     
@@ -12,7 +12,7 @@ class Ecm::Frontend::EventsController < Ecm::FrontendController
       @days[day] = []
       @events.each do |event|
         
-        if event.begin_at >= DateTime.new(@year.to_i, @month.to_i, day).in_time_zone and event.begin_at < DateTime.new(@year.to_i, @month.to_i, day).in_time_zone.end_of_day
+        if event.begin_at >= DateTime.new(@year.to_i, @month.to_i, day).beginning_of_day.in_time_zone and event.begin_at < DateTime.new(@year.to_i, @month.to_i, day).end_of_day.in_time_zone
           @days[day].push event
         end
       end
