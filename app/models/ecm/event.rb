@@ -34,4 +34,16 @@ class Ecm::Event < ActiveRecord::Base
     end_of_month = begin_of_month.end_of_month 
     where("begin_at >= ? AND begin_at < ?", begin_of_month, end_of_month)
   end
+  
+  def begin_at_between(date_time_range_begin, date_time_range_end)
+    if begin_at >= date_time_range_begin and begin_at < date_time_range_end
+      return true
+    else
+      return false  
+    end  
+  end
+  
+  def begin_at_day(date_time)
+    begin_at_between(date_time.beginning_of_day, date_time.end_of_day)
+  end
 end
