@@ -17,6 +17,8 @@
 #  updated_at                 :datetime
 #
 class Ecm::Event < ActiveRecord::Base
+  self.abstract_class = true  
+  
   has_attached_file :preview_image, :styles => { :original => "110x110>" }
   
   
