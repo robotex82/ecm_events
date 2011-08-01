@@ -1,2 +1,2 @@
-<%= link_to 'previous month', calendar_events_path((time - 1.month).year, (time - 1.month).month) %>
-<%= link_to 'next month', calendar_events_path((time + 1.month).year, (time + 1.month).month) %>
+<%= link_to t(:previous_month), calendar_events_path((time - 1.month).year, (time - 1.month).month) %> | 
+<%= link_to t(:next_month), calendar_events_path((time + 1.month).year, (time + 1.month).month) %>
