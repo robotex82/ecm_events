@@ -1,0 +1,7 @@
+de:
+  previous_month: "<< Vorheriger Monat"
+  next_month: "Nächster Monat >>"
+  time:
+    formats:
+      event: "%d %B"
+      calendar: "%Y %B"
